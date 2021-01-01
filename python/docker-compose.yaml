@@ -1,0 +1,10 @@
+version: '3'
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - 10000:8888
+    environment:
+      - DISPLAY

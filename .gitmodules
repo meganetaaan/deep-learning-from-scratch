@@ -1,0 +1,4 @@
+[submodule "python/deep-learning-from-scratch"]
+	path = python/deep-learning-from-scratch
+	url = https://github.com/oreilly-japan/deep-learning-from-scratch.git
+  ignore = dirty
