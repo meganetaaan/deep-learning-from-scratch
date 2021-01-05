@@ -54,16 +54,15 @@ def forward(network, x):
   return y
 
 #%%
-network = init_network()
-x = np.array([1.0, 0.5])
-y = forward(network, x)
-print(y)
+if __name__ == "__main__":
+  network = init_network()
+  x = np.array([1.0, 0.5])
+  y = forward(network, x)
+  print(y)
 
-#%%
-x = np.arange(-5.0, 5.0, 0.1)
-# y = step_function(x)
-y = sigmoid(x)
-plt.plot(x, y)
-plt.ylim(-0.1, 1.1)
-plt.show()
-# %%
+  x = np.arange(-5.0, 5.0, 0.1)
+  # y = step_function(x)
+  y = sigmoid(x)
+  plt.plot(x, y)
+  plt.ylim(-0.1, 1.1)
+  plt.show()
