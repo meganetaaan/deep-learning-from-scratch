@@ -4,7 +4,7 @@ import numpy as np
 sys.path.append('./deep-learning-from-scratch')
 import matplotlib.pylab as plt
 from dataset.mnist import load_mnist
-from two_layer_net import TwoLayerNet
+from two_layer_net_with_layer import TwoLayerNet
 
 #%%
 (x_train, t_train), (x_test, t_test) = \
@@ -32,7 +32,7 @@ for i in range(iters_num):
   t_batch = t_train[batch_mask]
 
   # calculate gradient
-  grad = network.numerical_gradient(x_batch, t_batch)
+  grad = network.gradient(x_batch, t_batch)
 
   # update parameters
   for key in ('W1', 'b1', 'W2', 'b2'):
